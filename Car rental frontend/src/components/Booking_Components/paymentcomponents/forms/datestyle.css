@@ -1,0 +1,23 @@
+/* General styling for the input */
+/* .hide-calendar-icon {
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    border: 1px solid #ccc;
+    padding: 5px;
+  } */
+  
+  /* Hide the default calendar picker indicator in WebKit browsers (Chrome, Safari, Edge) */
+  .hide-calendar-icon::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  
+  /* For Firefox, the indicator is harder to hide with pseudo-elements. A common workaround is to use 
+     an input type="text" and trigger the date picker programmatically, or use a library. 
+     If you must use type="date", Firefox may still show an icon, but 'appearance: none' helps.
+  */
+  .hide-calendar-icon::-moz-calendar-picker-indicator {
+    display: none;
+  }
+  
